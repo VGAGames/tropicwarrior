@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{5245001D-DF8A-1990-130A-7FEAC61A5FBF}</ProjectGuid>
+	<ProjectGuid>{B4E4CF18-4AF5-04C2-6FA7-DE9A6D764CED}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -250,13 +250,13 @@
  <HintPath>C:/Program Files/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>C:/Users/rafael/WarriorLeftRight-Unity5/Assets/DOTween/DOTween.dll</HintPath>
+ <HintPath>C:/Users/rafael/tropicwarrior/Assets/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>C:/Users/rafael/WarriorLeftRight-Unity5/Assets/DOTween/DOTween43.dll</HintPath>
+ <HintPath>C:/Users/rafael/tropicwarrior/Assets/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>C:/Users/rafael/WarriorLeftRight-Unity5/Assets/DOTween/DOTween46.dll</HintPath>
+ <HintPath>C:/Users/rafael/tropicwarrior/Assets/DOTween/DOTween46.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

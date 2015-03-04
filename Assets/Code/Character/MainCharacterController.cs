@@ -276,8 +276,8 @@ public class MainCharacterController : MonoBehaviour {
 		public override void Enter (Hashtable _parameters)
 		{
 			base.Enter (_parameters);
-			Debug.Log("PUESOK");
 			Instantiate (myOwner.Skill);
+			myOwner.skeletonAnimation.state.SetAnimation(1, "magia", false);
 			SkillController.OnDestroy += delegate() {
 				ChangeState(myOwner.idleState);
 			};

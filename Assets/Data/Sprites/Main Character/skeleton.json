@@ -1,13 +1,15 @@
 {
-"skeleton": { "hash": "7LUocrv7SozRDjn+PhjCUN8BncI", "spine": "2.0.22", "width": 1047.32, "height": 1264.74, "images": "../ai_rambo/" },
+"skeleton": { "hash": "HPgMPnQv7JGtdiDmQRmYSlJCPhs", "spine": "2.0.22", "width": 1047.32, "height": 2346.4, "images": "../ai_rambo/" },
 "bones": [
 	{ "name": "root", "x": 106.92, "y": 298.31 },
+	{ "name": "GOTA", "parent": "root", "length": 62.15, "x": 168.44, "y": 723.73, "rotation": -90 },
 	{ "name": "bandana", "parent": "root", "length": 142.08, "x": 192.71, "y": 675.32, "rotation": 6.73 },
 	{ "name": "body", "parent": "root", "length": 239.59, "x": 282.15, "y": 374.32, "rotation": -97.62 },
 	{ "name": "casquillo", "parent": "root", "length": 61.94, "x": 823.95, "y": -105.55, "rotation": -1.36 },
 	{ "name": "cigar", "parent": "root", "length": 109.71, "x": 333.75, "y": 515.36, "rotation": -13.29 },
 	{ "name": "explosion", "parent": "root", "length": 177.16, "x": 868.67, "y": 264.24, "rotation": 0.45 },
 	{ "name": "falda", "parent": "root", "length": 29.29, "x": 227.11, "y": 81.92, "rotation": -93.15 },
+	{ "name": "gunflare", "parent": "root", "length": 118.84, "x": 192.38, "y": 1959.37, "rotation": -90 },
 	{ "name": "head", "parent": "root", "length": 153.69, "x": 266.67, "y": 628.88, "rotation": -85.04 },
 	{ "name": "hombro_d", "parent": "root", "length": 48.67, "x": 387.07, "y": 391.52, "rotation": -58.11 },
 	{ "name": "hombro_i", "parent": "root", "length": 68.99, "x": 104.99, "y": 396.68, "rotation": -85.94 },
@@ -52,7 +54,9 @@
 	{ "name": "casquillo", "bone": "casquillo", "attachment": "casquillo" },
 	{ "name": "explosion_1", "bone": "explosion" },
 	{ "name": "mano_d", "bone": "mano_d", "attachment": "mano_d" },
-	{ "name": "smoke_cigar", "bone": "smoke cigar", "attachment": "smoke_cigar" }
+	{ "name": "smoke_cigar", "bone": "smoke cigar", "attachment": "smoke_cigar" },
+	{ "name": "gota", "bone": "GOTA", "attachment": "gota" },
+	{ "name": "smoke_FLARE", "bone": "gunflare", "attachment": "smoke_FLARE" }
 ],
 "skins": {
 	"default": {
@@ -70,6 +74,7 @@
 		},
 		"brazo+arma": {
 			"brazo_colt": { "x": 160.52, "y": 47.95, "rotation": -2.24, "width": 638, "height": 363 },
+			"brazo_gunflare": { "x": 311.09, "y": 29.06, "rotation": -2.24, "width": 915, "height": 363 },
 			"brazo_m4-01": { "x": 311.09, "y": 29.06, "rotation": -2.24, "width": 915, "height": 363 }
 		},
 		"brazo_I": {
@@ -105,8 +110,12 @@
 		"falda": {
 			"falda": { "x": -22.66, "y": 9.11, "rotation": 93.15, "width": 496, "height": 198 }
 		},
+		"gota": {
+			"gota": { "x": 23.37, "y": -5.51, "scaleX": 0.118, "scaleY": 0.118, "rotation": 90, "width": 626, "height": 626 }
+		},
 		"head": {
-			"head": { "x": 18.41, "y": 2.01, "rotation": 85.04, "width": 550, "height": 567 }
+			"head": { "x": 18.41, "y": 2.01, "rotation": 85.04, "width": 550, "height": 567 },
+			"head2": { "x": 18.41, "y": 2.01, "rotation": 85.04, "width": 550, "height": 567 }
 		},
 		"hombro_I": {
 			"hombro_I": { "x": 9.43, "y": 13.7, "rotation": 85.94, "width": 267, "height": 254 }
@@ -123,17 +132,201 @@
 		"pierna_d": {
 			"pierna_d": { "x": 63.16, "y": 3.8, "rotation": 85.04, "width": 181, "height": 298 }
 		},
+		"smoke_FLARE": {
+			"smoke_FLARE": { "x": 95.08, "scaleX": 1.762, "scaleY": 1.762, "rotation": 90, "width": 181, "height": 216 }
+		},
 		"smoke_cigar": {
 			"smoke_cigar": { "x": 33.69, "y": -9.84, "rotation": -91.35, "width": 181, "height": 216 }
 		}
 	}
 },
 "animations": {
+	"magia": {
+		"slots": {
+			"brazo+arma": {
+				"attachment": [
+					{ "time": 0, "name": "brazo_gunflare" }
+				]
+			},
+			"casquillo": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"explosion_1": {
+				"attachment": [
+					{ "time": 0.7666, "name": "explosion_1" },
+					{ "time": 0.8, "name": "explosion_2" },
+					{ "time": 0.8333, "name": "explosion_3" },
+					{ "time": 0.8666, "name": "explosion_4" },
+					{ "time": 0.9, "name": "explosion_5" },
+					{ "time": 0.9333, "name": "explosion_6" },
+					{ "time": 0.9666, "name": "explosion_7" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"gota": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"smoke_FLARE": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.8666, "color": "ffffff00" },
+					{ "time": 0.9, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.2666, "color": "ffffffff" },
+					{ "time": 1.6333, "color": "ffffff00" }
+				]
+			},
+			"smoke_cigar": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"GOTA": {
+				"translate": [
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				]
+			},
+			"hombro_i": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.3333, "angle": -84.46, "curve": "stepped" },
+					{ "time": 0.4, "angle": -84.46 },
+					{ "time": 0.6, "angle": 11.79 },
+					{ "time": 0.7333, "angle": 152.68, "curve": "stepped" },
+					{ "time": 1.5, "angle": 152.68 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.4, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.7333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.5, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.4, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.6, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.7333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.5, "x": 1, "y": 1 }
+				]
+			},
+			"brazo+arma": {
+				"rotate": [
+					{ "time": 0.6333, "angle": 0 },
+					{ "time": 0.7333, "angle": -61.74 }
+				],
+				"translate": [
+					{ "time": 0.3666, "x": 0.22, "y": 15.95, "curve": "stepped" },
+					{ "time": 0.6333, "x": 0.22, "y": 15.95, "curve": "stepped" },
+					{ "time": 0.7333, "x": 0.22, "y": 15.95 }
+				],
+				"scale": [
+					{ "time": 0.6333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.7333, "x": 1, "y": 1 }
+				]
+			},
+			"hombro_d": {
+				"rotate": [
+					{ "time": 0.5666, "angle": 0 },
+					{ "time": 0.7333, "angle": -23.2 }
+				],
+				"translate": [
+					{ "time": 0.5666, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.7333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0.5666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.7333, "x": 1, "y": 1 }
+				]
+			},
+			"mano_d": {
+				"rotate": [
+					{ "time": 0.6666, "angle": 0, "curve": "stepped" },
+					{ "time": 0.7333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0.6666, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.7333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0.6666, "x": 1, "y": 1 }
+				]
+			},
+			"explosion": {
+				"rotate": [
+					{ "time": 0.7666, "angle": 90, "curve": "stepped" },
+					{ "time": 1, "angle": 90 }
+				],
+				"translate": [
+					{ "time": 0.7666, "x": -868.63, "y": 866.19, "curve": "stepped" },
+					{ "time": 1, "x": -868.63, "y": 866.19 }
+				]
+			},
+			"gunflare": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.8666, "angle": 0, "curve": "stepped" },
+					{ "time": 0.9, "angle": 0, "curve": "stepped" },
+					{ "time": 1.2666, "angle": 0, "curve": "stepped" },
+					{ "time": 1.6333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": -131.99, "y": 407.99, "curve": "stepped" },
+					{ "time": 0.8666, "x": -131.99, "y": 407.99 },
+					{ "time": 0.9, "x": -131.99, "y": 408 },
+					{ "time": 1.6333, "x": -684, "y": 834 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.8666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.9, "x": 1, "y": 1 },
+					{ "time": 1.6333, "x": 2.574, "y": 2.574 }
+				]
+			}
+		},
+		"drawOrder": [
+			{
+				"time": 0.5,
+				"offsets": [
+					{ "slot": "cigar", "offset": -3 }
+				]
+			}
+		]
+	},
 	"rambo_FAIL_M4": {
 		"slots": {
 			"casquillo": {
 				"attachment": [
 					{ "time": 0, "name": null }
+				]
+			},
+			"gota": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.1666, "color": "ffffffff" }
+				]
+			},
+			"head": {
+				"attachment": [
+					{ "time": 0, "name": "head2" },
+					{ "time": 1.2333, "name": "head" }
+				]
+			},
+			"smoke_FLARE": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"smoke_cigar": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
 				]
 			}
 		},
@@ -227,6 +420,17 @@
 				"rotate": [
 					{ "time": 0.3333, "angle": -19.72 }
 				]
+			},
+			"GOTA": {
+				"translate": [
+					{ "time": 0.2, "x": 0, "y": 0 },
+					{ "time": 0.6666, "x": 5.74, "y": -146.57 },
+					{ "time": 1.1, "x": 11.49, "y": -183.93 }
+				],
+				"scale": [
+					{ "time": 0.6666, "x": 1, "y": 1 },
+					{ "time": 1.1, "x": 1.343, "y": 1.343 }
+				]
 			}
 		},
 		"drawOrder": [
@@ -249,6 +453,28 @@
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 0.0333, "name": null }
+				]
+			},
+			"gota": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.1666, "color": "ffffffff" }
+				]
+			},
+			"head": {
+				"attachment": [
+					{ "time": 0, "name": "head2" },
+					{ "time": 1.2333, "name": "head" }
+				]
+			},
+			"smoke_FLARE": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"smoke_cigar": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
 				]
 			}
 		},
@@ -391,6 +617,17 @@
 					{ "time": 1.0666, "x": 0.763, "y": 0.763 },
 					{ "time": 1.2666, "x": 1, "y": 1 }
 				]
+			},
+			"GOTA": {
+				"translate": [
+					{ "time": 0.2, "x": 0, "y": 0 },
+					{ "time": 0.6666, "x": 5.74, "y": -146.57 },
+					{ "time": 1.1, "x": 11.49, "y": -183.93 }
+				],
+				"scale": [
+					{ "time": 0.6666, "x": 1, "y": 1 },
+					{ "time": 1.1, "x": 1.343, "y": 1.343 }
+				]
 			}
 		},
 		"drawOrder": [
@@ -441,6 +678,21 @@
 					{ "time": 0.2666, "name": "explosion_8" },
 					{ "time": 0.3, "name": "explosion_9" },
 					{ "time": 0.3333, "name": null }
+				]
+			},
+			"gota": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"smoke_FLARE": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"smoke_cigar": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
 				]
 			}
 		},
@@ -783,6 +1035,21 @@
 					{ "time": 0.3, "name": "explosion_9" },
 					{ "time": 0.3333, "name": null }
 				]
+			},
+			"gota": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"smoke_FLARE": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"smoke_cigar": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
 			}
 		},
 		"bones": {
@@ -1117,6 +1384,16 @@
 					{ "time": 0.8333, "name": "puro" }
 				]
 			},
+			"gota": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"smoke_FLARE": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
 			"smoke_cigar": {
 				"attachment": [
 					{ "time": 0.5333, "name": "smoke_cigar" }
@@ -1267,6 +1544,16 @@
 				"attachment": [
 					{ "time": 0.2666, "name": "purolight" },
 					{ "time": 0.8333, "name": "puro" }
+				]
+			},
+			"gota": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"smoke_FLARE": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
 				]
 			},
 			"smoke_cigar": {
