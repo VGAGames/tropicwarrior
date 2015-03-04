@@ -1,0 +1,152 @@
+
+skeleton.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 707, 136
+  size: 348, 309
+  orig: 452, 388
+  offset: 42, 46
+  index: -1
+brazo_i
+  rotate: false
+  xy: 882, 693
+  size: 111, 153
+  orig: 298, 268
+  offset: 82, 55
+  index: -1
+falda
+  rotate: false
+  xy: 674, 2
+  size: 331, 98
+  orig: 389, 158
+  offset: 32, 35
+  index: -1
+gorro
+  rotate: false
+  xy: 490, 486
+  size: 467, 202
+  orig: 629, 319
+  offset: 78, 52
+  index: -1
+lanza
+  rotate: false
+  xy: 2, 19
+  size: 670, 67
+  orig: 770, 171
+  offset: 52, 60
+  index: -1
+leg_i
+  rotate: false
+  xy: 882, 848
+  size: 137, 165
+  orig: 271, 254
+  offset: 45, 58
+  index: -1
+shield-17
+  rotate: false
+  xy: 2, 470
+  size: 486, 543
+  orig: 629, 580
+  offset: 50, 34
+  index: -1
+wood-18
+  rotate: false
+  xy: 2, 88
+  size: 352, 380
+  orig: 440, 429
+  offset: 29, 19
+  index: -1
+wood-19
+  rotate: true
+  xy: 356, 102
+  size: 366, 349
+  orig: 440, 429
+  offset: 27, 33
+  index: -1
+wood-20
+  rotate: false
+  xy: 490, 690
+  size: 390, 323
+  orig: 440, 429
+  offset: 39, 50
+  index: -1
+
+skeleton2.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+brazo_d
+  rotate: false
+  xy: 814, 41
+  size: 108, 103
+  orig: 156, 140
+  offset: 30, 21
+  index: -1
+codo
+  rotate: false
+  xy: 388, 9
+  size: 82, 79
+  orig: 176, 132
+  offset: 39, 24
+  index: -1
+head
+  rotate: false
+  xy: 2, 21
+  size: 198, 233
+  orig: 313, 329
+  offset: 59, 59
+  index: -1
+hombre_d
+  rotate: false
+  xy: 929, 164
+  size: 85, 90
+  orig: 156, 140
+  offset: 27, 31
+  index: -1
+hombre_i
+  rotate: false
+  xy: 815, 146
+  size: 112, 108
+  orig: 207, 224
+  offset: 41, 41
+  index: -1
+leg_d
+  rotate: false
+  xy: 585, 2
+  size: 129, 170
+  orig: 234, 295
+  offset: 44, 91
+  index: -1
+mano_d
+  rotate: false
+  xy: 716, 46
+  size: 96, 126
+  orig: 156, 140
+  offset: 22, 13
+  index: -1
+mano_i
+  rotate: false
+  xy: 585, 174
+  size: 228, 80
+  orig: 327, 140
+  offset: 56, 32
+  index: -1
+pie_d
+  rotate: false
+  xy: 388, 90
+  size: 195, 164
+  orig: 292, 255
+  offset: 40, 50
+  index: -1
+pie_i
+  rotate: false
+  xy: 202, 63
+  size: 184, 191
+  orig: 292, 255
+  offset: 55, 29
+  index: -1

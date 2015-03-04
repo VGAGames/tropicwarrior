@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Code\Editor\MeshRendererSortingLayersEditor.cs">
+    <Files>
+      <File FileName="Assets\Code\Character\MainCharacterController.cs" Line="280" Column="31" />
+      <File FileName="Assets\Code\HUD\HUDManager.cs" Line="54" Column="3" />
+      <File FileName="Assets\Code\Editor\MeshRendererSortingLayersEditor.cs" Line="18" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
